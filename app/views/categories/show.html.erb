@@ -3,8 +3,8 @@
 <%= render @category %>
 
 <div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
+  <%= link_to "Edit this category", edit_user_category_path(current_user, @category) %>  |
+  <%= link_to "Back to categories", user_categories_path(current_user) %>
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
+  <%= button_to "Destroy this category", user_category_path(current_user, @category), method: :delete, data: { confirm: "Are you sure?" } %>
 </div>
