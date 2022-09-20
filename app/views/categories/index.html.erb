@@ -3,12 +3,17 @@
 <h1>Categories</h1>
 
 <div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
+  <% if @categories.any? %>
+    <ul>
+      <% @categories.each do |category| %>
+        <li>
+          <%= render category %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No categories yet.</p>
   <% end %>
 </div>
 
-<%= link_to "New category", new_category_path %>
+<%= link_to "New category", new_user_category_path(current_user) %>

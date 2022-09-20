@@ -33,12 +33,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_142822) do
   end
 
   create_table "joins", force: :cascade do |t|
-    t.bigint "expense_id", null: false
-    t.bigint "category_id", null: false
+    t.bigint "expenses_id", null: false
+    t.bigint "categories_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_joins_on_category_id"
-    t.index ["expense_id"], name: "index_joins_on_expense_id"
+    t.index ["categories_id"], name: "index_joins_on_categories_id"
+    t.index ["expenses_id"], name: "index_joins_on_expenses_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,6 +56,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_142822) do
 
   add_foreign_key "categories", "users"
   add_foreign_key "expenses", "users"
-  add_foreign_key "joins", "categories"
-  add_foreign_key "joins", "expenses"
+  add_foreign_key "joins", "categories", column: "categories_id"
+  add_foreign_key "joins", "expenses", column: "expenses_id"
 end
