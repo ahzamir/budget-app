@@ -1,2 +1,6 @@
 <div id="<%= dom_id category %>">
+    <h2>
+        <%= link_to category.name, user_category_expenses_path(current_user, category) %>
+    </h2>
+    <img src="<%= category.icon %>" alt="<%= category.name %>">
 </div>
