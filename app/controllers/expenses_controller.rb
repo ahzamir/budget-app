@@ -28,7 +28,9 @@ class ExpensesController < ApplicationController
     respond_to do |format|
       if @expense.save
         @expense.categories << @category
-        format.html { redirect_to user_category_expenses_path(current_user, @category), notice: 'Expense was successfully created.' }
+        format.html do
+          redirect_to user_category_expenses_path(current_user, @category), notice: 'Expense was successfully created.'
+        end
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
