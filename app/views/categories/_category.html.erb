@@ -3,4 +3,7 @@
         <%= link_to category.name, user_category_expenses_path(current_user, category) %>
     </h2>
     <img src="<%= category.icon %>" alt="<%= category.name %>">
+    <p>
+        Total expenses: <%= category.total_expenses(current_user) %>
+    </p>
 </div>
