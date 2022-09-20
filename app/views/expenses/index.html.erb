@@ -2,13 +2,14 @@
 
 <h1>Expenses</h1>
 
+<p>
+  Total expenses: <%= @category.total_expenses(current_user).round(2) %>
+</p>
+
 <div id="expenses">
   <% @expenses.each do |expense| %>
     <%= render expense %>
-    <p>
-      <%= link_to "Show this expense", expense %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New expense", new_expense_path %>
+<%= link_to "New expense", new_user_category_expense_path(current_user, @category) %>

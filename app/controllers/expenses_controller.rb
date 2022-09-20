@@ -13,6 +13,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = Expense.new
+    @category = Category.find(params[:category_id])
   end
 
   # GET /expenses/1/edit
@@ -21,6 +22,7 @@ class ExpensesController < ApplicationController
   # POST /expenses or /expenses.json
   def create
     @expense = Expense.new(expense_params)
+    @category = Category.find(params[:category_id])
 
     respond_to do |format|
       if @expense.save
