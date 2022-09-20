@@ -3,7 +3,8 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    @expenses = Expense.all
+    @category = Category.find(params[:category_id])
+    @expenses = @category.expenses.where(user_id: current_user.id).order('created_at DESC')
   end
 
   # GET /expenses/1 or /expenses/1.json
