@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'categories#index'
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
   resources :users do
     resources :categories do
       resources :expenses
