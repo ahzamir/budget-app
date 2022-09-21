@@ -1,0 +1,15 @@
+<div class="page-header">
+    <h2>User Profile</h2>
+</div>
+<div class="user-info">
+    <h3>
+        Name: <%= @user.name %>
+    </h3>
+    <p>
+        Email: <%= @user.email %>
+    </p>
+    <p>
+        Created at: <%= @user.created_at %>
+    </p>
+    <%= link_to "Categories", user_categories_path(@user) %>
+</div>

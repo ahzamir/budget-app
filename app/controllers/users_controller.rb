@@ -7,7 +7,9 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1 or /users/1.json
-  def show; end
+  def show
+    @categories = current_user.categories
+  end
 
   # GET /users/new
   def new
@@ -23,7 +25,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to user_url(@user), notice: 'User was successfully created.' }
+        format.html { redirect_to current_user_categories_path }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }

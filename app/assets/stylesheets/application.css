@@ -281,6 +281,24 @@ form label {
   margin-bottom: 2rem;
 }
 
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.user-info h3 {
+  font-size: 1.5rem;
+}
+
+.user-info p {
+  font-size: 1.2rem;
+}
+
 .categories,
 .expenses {
   display: flex;
