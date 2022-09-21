@@ -4,6 +4,10 @@
 
 > This is a budget app that allows users to add their expenses categories and expenses. It also allows users to see their total expenses.
 
+## Live Demo
+- [Video demo](https://www.loom.com/share/30f987d8de024de8b90b6ace0016a6d0)
+- [Budget_app - Comming soon]()
+
 ## Schema
 ![](https://github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png)
 
@@ -91,6 +95,7 @@ $ gem install rails
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+- Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
 
 Feel free to check the [issues page](https://github.com/ahzamir/budget-app/issues).
 
