@@ -90,6 +90,10 @@ a {
   padding: 0.5rem;
 }
 
+a:hover {
+  color: var(--main);
+}
+
 .category-name a {
   font-size: 1.2rem;
   padding: 0%;
