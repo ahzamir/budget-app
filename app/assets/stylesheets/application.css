@@ -106,7 +106,7 @@ a:hover {
 }
 
 #menuToggle a:hover {
-  color: tomato;
+  color: rgb(246, 128, 107);
 }
 
 form input {
@@ -118,6 +118,11 @@ form input {
   margin: 0.5rem;
   border: var(--second) 1px solid;
   border-radius: 5px;
+}
+
+form input:focus {
+  outline: none;
+  background-color: hsla(95, 68%, 42%, 0.130);
 }
 
 .actions input {
@@ -195,9 +200,9 @@ form input {
   margin: -100px 0 0 -50px;
   padding: 2rem;
   padding-top: 125px;
-  background: hsla(212, 56%, 49%, 0.9);
+  background: hsla(95, 68%, 42%, 0.73);
   border: #60b52368 3px solid;
-  border-radius: 0 0 100px 0;
+  border-radius: 0 0 200px 0;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
@@ -206,7 +211,7 @@ form input {
 }
 
 #menu li {
-  padding: 10px 0;
+  padding: 10px 5px;
   font-size: 1.2rem;
 }
 
