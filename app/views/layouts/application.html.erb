@@ -12,17 +12,25 @@
 
   <body>
     <header>
-      <div>
+      <h1>
         BudgetApp
-      </div>
-      <div>
-        <% if user_signed_in? %>
-          <button><%= link_to "Sign out", destroy_user_session_path, method: :delete %></button>
-        <% else %>
-          <button><%= link_to  "Sign up", new_user_registration_path %></button>
-          <button><%= link_to "Login in", new_user_session_path %></button>
-        <% end %>
-      </div>
+      </h1>
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <% if user_signed_in? %>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to  "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Login in", new_user_session_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
     </header>
     <div class="main-wrapper">
       <% if notice %>

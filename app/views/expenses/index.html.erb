@@ -1,12 +1,13 @@
 <p style="color: green"><%= notice %></p>
+<div class="page-header">
+  <h2>Expenses</h2>
+</div>
 
-<h1>Expenses</h1>
-
-<p>
+<h3>
   Total expenses: <%= @category.total_expenses(current_user).round(2) %>
-</p>
+</h3>
 
-<div id="expenses">
+<div id="expenses" class="expenses">
   <% @expenses.each do |expense| %>
     <%= render expense %>
   <% end %>

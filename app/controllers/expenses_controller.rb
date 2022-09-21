@@ -29,7 +29,7 @@ class ExpensesController < ApplicationController
       if @expense.save
         @expense.categories << @category
         format.html do
-          redirect_to user_category_expenses_path(current_user, @category), notice: 'Expense was successfully created.'
+          redirect_to user_category_expenses_path(current_user, @category)
         end
         format.json { render :show, status: :created, location: @expense }
       else
@@ -43,7 +43,7 @@ class ExpensesController < ApplicationController
   def update
     respond_to do |format|
       if @expense.update(expense_params)
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully updated.' }
+        format.html { redirect_to expense_url(@expense) }
         format.json { render :show, status: :ok, location: @expense }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -57,7 +57,7 @@ class ExpensesController < ApplicationController
     @expense.destroy
 
     respond_to do |format|
-      format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
+      format.html { redirect_to expenses_url }
       format.json { head :no_content }
     end
   end

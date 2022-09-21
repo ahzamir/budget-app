@@ -1,8 +1,13 @@
-<div id="<%= dom_id expense %>">
-    <h3>
-        <%= expense.name %>
-    </h3>
-    <p>
+<div id="<%= dom_id expense %>" class="category">
+    <div class="category-name">
+        <h3>
+            <%= expense.name %>
+        </h3>
+        <p class="created-at">
+            <%= expense.created_at.strftime("%d/%m/%Y") %>
+        </p>
+    </div>
+    <p class="total-amount">
         Amount: <%= expense.amount %>
     </p>
 </div>
