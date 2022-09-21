@@ -30,7 +30,7 @@ $ git clone https://github.com/ahzamir/budget-app.git
 ### Usage
 
 ```
-$ cd blog-app
+$ cd budget-app
 ```
 ```
 $ rails server
