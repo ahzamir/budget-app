@@ -120,11 +120,6 @@ form input {
   border-radius: 5px;
 }
 
-form input:focus {
-  outline: none;
-  background-color: hsla(95, 68%, 42%, 0.130);
-}
-
 .actions input {
   font-family: 'Proxima Nova', sans-serif;
   font-weight: 700;
@@ -135,6 +130,11 @@ form input:focus {
   border: var(--second) 1px solid;
   border-radius: 5px;
   background-color: var(--second);
+}
+
+form input:focus {
+  outline: none;
+  background-color: hsla(95, 68%, 42%, 13%);
 }
 
 .actions input:hover {
