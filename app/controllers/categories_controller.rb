@@ -3,7 +3,11 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    if current_user
+      @categories = current_user.categories
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /categories/1 or /categories/1.json

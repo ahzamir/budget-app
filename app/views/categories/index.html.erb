@@ -6,6 +6,7 @@
   <div id="categories" class="categories">
     <% if @categories.any? %>
       <ul>
+        <p>Click on a category name to see all expenses for that category.</p>
         <% @categories.each do |category| %>
           <li>
             <%= render category %>
@@ -13,11 +14,11 @@
         <% end %>
       </ul>
     <% else %>
-      <p>No categories yet. <%= link_to "Create one", new_user_category_path(current_user) %></p>
+      <p>No categories yet.</p>
     <% end %>
   </div>
 
-  <%= link_to "New category", new_user_category_path(current_user) %>
+  <%= link_to "| New category |", new_user_category_path(current_user) %>
 <% else %>
   <div>
     <h3 class="alert-msg">You are not signed in</h3>

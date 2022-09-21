@@ -90,6 +90,10 @@ a {
   padding: 0.5rem;
 }
 
+a:hover {
+  color: var(--main);
+}
+
 .category-name a {
   font-size: 1.2rem;
   padding: 0%;
@@ -102,7 +106,7 @@ a {
 }
 
 #menuToggle a:hover {
-  color: tomato;
+  color: rgb(246, 128, 107);
 }
 
 form input {
@@ -126,6 +130,11 @@ form input {
   border: var(--second) 1px solid;
   border-radius: 5px;
   background-color: var(--second);
+}
+
+form input:focus {
+  outline: none;
+  background-color: hsla(95, 68%, 42%, 13%);
 }
 
 .actions input:hover {
@@ -191,9 +200,9 @@ form input {
   margin: -100px 0 0 -50px;
   padding: 2rem;
   padding-top: 125px;
-  background: hsla(212, 56%, 49%, 0.9);
+  background: hsla(95, 68%, 42%, 0.73);
   border: #60b52368 3px solid;
-  border-radius: 0 0 100px 0;
+  border-radius: 0 0 200px 0;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
@@ -202,7 +211,7 @@ form input {
 }
 
 #menu li {
-  padding: 10px 0;
+  padding: 10px 5px;
   font-size: 1.2rem;
 }
 
@@ -279,6 +288,24 @@ form label {
   width: 100%;
   background-color: #3778c2;
   margin-bottom: 2rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.user-info h3 {
+  font-size: 1.5rem;
+}
+
+.user-info p {
+  font-size: 1.2rem;
 }
 
 .categories,

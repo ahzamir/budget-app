@@ -4,8 +4,8 @@ class Ability
   def initialize(user)
     return unless user.present?
 
-    can :manage, Category, user_id: user.id
-    can :manage, Expense, user_id: user.id
+    can :manage, Category, user_id: current_user.id
+    can :manage, Expense, user_id: current_user.id
     can :manage, User
     # Define abilities for the user here. For example:
     #
