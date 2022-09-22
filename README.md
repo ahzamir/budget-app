@@ -6,7 +6,7 @@
 
 ## Live Demo
 - [Video demo](https://www.loom.com/share/30f987d8de024de8b90b6ace0016a6d0)
-- [Budget_app - Comming soon]()
+- [Budget_app](https://warm-sea-61627.herokuapp.com/users/sign_in)
 
 ## Schema
 ![](https://github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png)
