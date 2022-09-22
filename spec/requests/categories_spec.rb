@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Categories", type: :request do
+RSpec.describe 'Categories', type: :request do
   describe 'GET #index' do
     include Devise::Test::IntegrationHelpers
     before do
@@ -19,4 +19,3 @@ RSpec.describe "Categories", type: :request do
     end
   end
 end
-
