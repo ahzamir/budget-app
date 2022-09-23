@@ -1,0 +1,28 @@
+<% if user_signed_in? %>
+  <div class="page-header">
+    <h2>Categories</h2>
+  </div>
+  <p style="color: green"><%= notice %></p>
+  <div id="categories" class="categories">
+    <% if @categories.any? %>
+      <ul>
+        <p>Click on a category name to see all expenses for that category.</p>
+        <% @categories.each do |category| %>
+          <li>
+            <%= render category %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>No categories yet.</p>
+    <% end %>
+  </div>
+
+  <%= link_to "| New category |", new_user_category_path(current_user) %>
+<% else %>
+  <div>
+    <h3 class="alert-msg">You are not signed in</h3>
+    <p class="alert-info">You need to Sign in to see your categories or Sign up if you don't have an account yet.</p>
+    <p class="alert-info">Click on side menu to Sign in or Sign up.</p>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+<div class="page-header">
+  <h2>Expenses</h2>
+</div>
+
+<h3>
+  Total expenses: <%= @category.total_expenses(current_user).round(2) %>
+</h3>
+
+<div id="expenses" class="expenses">
+  <% @expenses.each do |expense| %>
+    <%= render expense %>
+  <% end %>
+</div>
+
+<%= link_to "| New expense |", new_user_category_expense_path(current_user, @category) %>
+<%= link_to "| Back to categories |", user_categories_path(current_user) %>

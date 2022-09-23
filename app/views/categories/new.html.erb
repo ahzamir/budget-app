@@ -1,0 +1,11 @@
+<div class="page-header">
+  <h2>New category</h2>
+</div>
+
+<%= render "form", category: @category %>
+
+<br>
+
+<div>
+  <%= link_to "| Back to categories |", user_categories_path(current_user) %>
+</div>

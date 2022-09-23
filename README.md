@@ -1,53 +1,92 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+## Budget App
 
-> Description the project.
+> This is a budget app that allows users to add their expenses categories and expenses. It also allows users to see their total expenses.
 
+## Live Demo
+- [Video demo](https://www.loom.com/share/30f987d8de024de8b90b6ace0016a6d0)
+- [Budget_app](https://zamir-budget-app.herokuapp.com)
 
-## Built With 
+## Schema
+![](https://github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png)
 
-- Major languages
-- Frameworks
-- Technologies used
+## Built With
 
-## Live Demo (if available) 💻
-
-[Live Demo Link](https://livedemo.com)
-
+- [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
+- [x] Framework: [Ruby on Rails](https://rubyonrails.org/)
+- [x] Linter: [Rubocop](https://rubocop.org/)
+- [x] Code Editor: [VS Code](https://code.visualstudio.com/)
+- [x] Database: [PostgreSQL](https://www.postgresql.org/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-You must have a browser on your device, visual code, a git version, [node.js](https://nodejs.org/en/) installed in your device and clone the repo from GitHub and follow the steps below.
-
-### Setup
-
-Clone the repository from GitHub, open the project folder, inside the project direcory open the commanline or Terminal and install the dependicies.
 
 ### Install
 
-inside the project direcory open the commanline or Terminal, run npm install to install all the dependicies.
+In the terminal, go to your file directory and run this command.
+
+```
+$ git clone https://github.com/ahzamir/budget-app.git
+```
 
 ### Usage
 
-To use this project or app run npm start in the project directory and you will see the live serever open on youe browser.
+```
+$ cd budget-app
+```
+```
+$ rails server
+```
+
+### Setup
+
+```
+$ bundle install
+```
+```
+$ rubocop .
+```
 
 ### Run tests
 
-For running tests inside the project directory run npm test in command line or Terminal.
+To install rspec, in the terminal kindly run this command
 
-### Deployment
+```
+$ gem install rspec
+```
 
+To run tests, please run this command
+```
+$ rspec ./spec/#{filename}_spec.rb
+```
 
+### Prerequisites
+
+- [x] A web browser like [Google Chrome](https://www.google.com/chrome/).
+- [x] A code editor like [Visual Studio Code](https://code.visualstudio.com/).
+- [x] A terminal to run the code.
+- [x] [Ruby](https://www.ruby-lang.org/en/) installed on your computer.
+- [x] [Rails](https://rubyonrails.org/) installed on your computer.
+
+You can check if Git is installed by running the following command in the terminal.
+```
+$ git --version
+```
+
+Likewise for Ruby installation.
+```
+$ ruby --version && irb
+```
+
+To install rails, in the terminal kindly run this command
+```
+$ gem install rails
+```
 ## Authors
+
+👤 **Ahmad Zamir Yousufi** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
 - GitHub: [@ahzamir](https://github.com/ahzamir).
 - Twitter: [@YousufiZamir](https://twitter.com/YousufiZamir)
@@ -56,8 +95,9 @@ For running tests inside the project directory run npm test in command line or T
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+- Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/ahzamir/budget-app/issues).
 
 ## Show your support
 
@@ -65,10 +105,12 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- [Microverse](https://www.microverse.org/)
+- Code Reviewers
+- Coding Partners
 
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
+![](https://img.shields.io/badge/Microverse-blueviolet)
