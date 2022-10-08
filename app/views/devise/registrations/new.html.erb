@@ -1,3 +1,4 @@
+<%= render 'shared/header' %>
 <div class="page-header">
   <h2>Sign up</h2>
 </div>
@@ -29,7 +30,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up", redirect_to: root_path %>
+    <%= f.submit "Sign up", redirect_to: authenticated_root_path %>
   </div>
 <% end %>
 

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'welcome/info'
   get 'welcome/start'
 
+  devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
     authenticated :user do
@@ -10,7 +11,6 @@ Rails.application.routes.draw do
     end
     unauthenticated { root 'welcome#index', as: :unauthenticated_root }
   end
-  devise_for :users
   resources :users do
     resources :categories do
       resources :expenses

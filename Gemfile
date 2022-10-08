@@ -75,3 +75,5 @@ end
 gem 'devise'
 
 gem 'cancancan'
+
+gem "font-awesome-rails"
