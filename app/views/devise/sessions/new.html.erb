@@ -4,6 +4,8 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
+    <%# create an image tag with the logo %>
+    <%= image_tag image_path('email.png'), class: 'img-responsive center-block' %>
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>

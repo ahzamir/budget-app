@@ -193,7 +193,8 @@ form input:focus {
   margin: -100px 0 0 -50px;
   padding: 2rem;
   padding-top: 125px;
-  background: hsla(95, 68%, 42%, 0.73);
+  background: rgb(55,120,194);
+  background: linear-gradient(270deg, rgba(55,120,194,0.6363795518207283) 28%, rgba(76,236,207,1) 89%);
   border: #60b52368 3px solid;
   border-radius: 0 0 200px 0;
   list-style-type: none;
