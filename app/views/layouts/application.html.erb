@@ -14,10 +14,7 @@
   </head>
 
   <body>
-    <header>
-      <h1 class="text-dark">
-        BudgetApp
-      </h1>
+    <header class="d-flex justify-content-between align-items-center">
       <nav role="navigation">
         <div id="menuToggle">
           <input type="checkbox" />
@@ -34,6 +31,9 @@
           </ul>
         </div>
       </nav>
+      <h1 class="text-center">
+        BudgetApp
+      </h1>
     </header>
     <div class="main-wrapper">
       <%= yield %>
