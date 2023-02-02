@@ -73,5 +73,7 @@ group :test do
 end
 
 gem 'devise'
-
+gem 'rails_12factor', group: :production
 gem 'cancancan'
+gem 'sassc-rails'
+gem 'bootstrap', '~> 5.1.3'
