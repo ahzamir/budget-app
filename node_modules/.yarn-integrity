@@ -1,0 +1,16 @@
+{
+  "systemParams": "linux-x64-93",
+  "modulesFolders": [
+    "node_modules"
+  ],
+  "flags": [],
+  "linkedModules": [],
+  "topLevelPatterns": [
+    "bootstrap@^5.2.3"
+  ],
+  "lockfileEntries": {
+    "bootstrap@^5.2.3": "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.3.tgz#54739f4414de121b9785c5da3c87b37ff008322b"
+  },
+  "files": [],
+  "artifacts": {}
+}
