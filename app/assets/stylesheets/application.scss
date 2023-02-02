@@ -44,7 +44,8 @@ body {
 }
 
 header {
-  background-color: var(--main);
+  background: rgb(55,120,194);
+  background: linear-gradient(270deg, rgba(55,120,194,1) 28%, rgba(76,236,207,1) 89%);
   color: var(--light);
   padding: 1rem;
   text-align: center;
@@ -272,14 +273,9 @@ form label {
 }
 
 .page-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
   width: 100%;
-  background-color: #3778c2;
-  margin-bottom: 2rem;
+  background: rgb(55,120,194);
+  background: linear-gradient(270deg, rgba(55,120,194,1) 28%, rgba(76,236,207,1) 89%);
 }
 
 .user-info {
