@@ -30,7 +30,7 @@
 }
 
 :root {
-  --light: #f5f5f5;
+  --light: #ebf7fa;
   --main: #3778c2;
   --text: #434b54;
   --second: rgba(76,236,207);
@@ -127,7 +127,7 @@ form input {
 
 form input:focus {
   outline: none;
-  background-color: hsla(95, 68%, 42%, 13%);
+  background-color: var(--light);
 }
 
 .actions input:hover {
