@@ -2,23 +2,22 @@
   <div class="page-header">
     <h2>Categories</h2>
   </div>
-  <p style="color: green"><%= notice %></p>
   <div id="categories" class="categories">
     <% if @categories.any? %>
-      <ul>
-        <p>Click on a category name to see all expenses for that category.</p>
+      <ul class="list-group">
+        <p class="alert-info">Click on category name to see its expenses.</p>
         <% @categories.each do |category| %>
-          <li>
+          <li class="list-group-item">
             <%= render category %>
           </li>
         <% end %>
       </ul>
     <% else %>
-      <p>No categories yet.</p>
+      <p class="alert-info text-center text-dark">You don't have any categories yet.</p>
     <% end %>
   </div>
 
-  <%= link_to "| New category |", new_user_category_path(current_user) %>
+  <%= link_to "New Category", new_user_category_path(current_user), class: "link-buttons" %>
 <% else %>
   <div>
     <h3 class="alert-msg">You are not signed in</h3>
