@@ -2,10 +2,15 @@
   <h2>New category</h2>
 </div>
 
-<%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "| Back to categories |", user_categories_path(current_user) %>
+<div class="d-flex justify-content-around p-5 pb-2 w-100">
+  <%= render "form", category: @category %>
+  <div class="d-none d-md-block w-25"></div>
+    <%= image_tag image_path('categories.png'), class: "d-none d-md-flex h-100" %>
+  </div>
 </div>
+
+<div class="d-flex justify-content-around w-100 pb-5">
+  <%= link_to "Back to categories", user_categories_path(current_user), class: "link-buttons" %>
+</div>
+
+
