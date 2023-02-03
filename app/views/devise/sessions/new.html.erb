@@ -5,12 +5,13 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%# create an image tag with the logo %>
-    <%= image_tag image_path('email.png'), class: 'img-responsive center-block' %>
+    <%= image_tag image_path('email.png'), class: 'img-responsive center-block icons' %>
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
+    <%= image_tag image_path('password.png'), class: 'img-responsive center-block icons' %>
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
