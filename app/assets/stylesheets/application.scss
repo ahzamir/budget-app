@@ -281,24 +281,6 @@ form label {
   background: linear-gradient(270deg, rgba(55,120,194,1) 28%, rgba(76,236,207,1) 89%);
 }
 
-.user-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  width: 100%;
-  margin-top: 2rem;
-}
-
-.user-info h3 {
-  font-size: 1.5rem;
-}
-
-.user-info p {
-  font-size: 1.2rem;
-}
-
 .categories,
 .expenses {
   display: flex;
@@ -334,5 +316,25 @@ form label {
   height: 25px;
 }
 
+.link-buttons {
+  padding: 1rem;
+  background-color: #3778c2;
+  border-radius: 5px;
+  color: var(--light);
+}
+
+.link-buttons:hover {
+  background-color: var(--light);
+  color: #3778c2;
+  border: #3778c2 1px solid;
+}
+
+.user-card {
+  width: 50%;
+}
+
 @media screen and (max-width: 768px) {
+  .user-card {
+    width: 100%;
+  }
 }
