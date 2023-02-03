@@ -131,13 +131,9 @@ form input {
   background-color: var(--second);
 }
 
-form input:focus {
-  outline: none;
-  background-color: var(--light);
-}
-
 .actions input:hover {
-  background-color: var(--main);
+  transition: 0.5s;
+  background-color: rgb(65, 208, 182);
   cursor: pointer;
 }
 
@@ -266,6 +262,9 @@ p {
 }
 
 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 75%;
   padding: 1rem;
   margin: 1rem;
