@@ -276,13 +276,6 @@ form label {
   background: linear-gradient(270deg, rgba(55, 120, 194, 1) 28%, rgba(76, 236, 207, 1) 89%);
 }
 
-.expenses {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1rem;
-}
-
 .icon {
   width: 35px;
   height: 35px;
@@ -305,7 +298,8 @@ form label {
   width: 50%;
 }
 
-.category {
+.category,
+.expense {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
