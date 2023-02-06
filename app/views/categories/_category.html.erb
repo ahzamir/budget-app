@@ -1,7 +1,9 @@
-<div id="<%= dom_id category %>" class="category">
-    <img src="<%= category.icon %>" alt="<%= category.name %>">
+<div id="<%= dom_id category %>" class="category d-flex justify-content-between align-items-center p-3 mb-2 text-dark rounded border border-dark ms-0">
     <div>
-        <h3 class="category-name">
+        <%= image_tag category.icon, class: "icon", alt: category.name %>
+    </div>
+    <div class="category-name d-flex flex-column justify-content-center align-items-center">
+        <h3>
             <%= link_to category.name, user_category_expenses_path(current_user, category) %>
         </h3>
         <p class="created-at">

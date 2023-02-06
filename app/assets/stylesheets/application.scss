@@ -87,11 +87,6 @@ a:hover {
   color: var(--main);
 }
 
-.category-name a {
-  font-size: 1.2rem;
-  padding: 0%;
-}
-
 #menuToggle a {
   text-decoration: none;
   color: var(--light);
@@ -286,17 +281,6 @@ form label {
   flex-wrap: wrap;
   width: 100%;
   padding: 1rem;
-}
-
-.category {
-  display: grid;
-  grid-template-columns: 1fr 2fr 0.5fr;
-  width: 100%;
-  padding: 1rem;
-  margin: 1rem;
-  border: var(--second) 1px solid;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.93);
 }
 
 .total-expenses,
