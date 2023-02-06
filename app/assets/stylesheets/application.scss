@@ -316,8 +316,16 @@ form label {
   width: 50%;
 }
 
+.category-name {
+  font-size: 1.2rem;
+}
+
 @media screen and (max-width: 768px) {
   .user-card {
     width: 100%;
+  }
+
+  .category-name {
+    font-size: 0.7rem;
   }
 }

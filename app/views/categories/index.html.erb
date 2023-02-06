@@ -2,12 +2,12 @@
   <div class="page-header">
     <h2>Categories</h2>
   </div>
-  <div id="categories" class="w-75 p-3 mb-2 bg-light text-dark rounded border border-dark m-3">
+  <div id="categories" class="w-100 p-3 mb-2 text-dark m-3">
     <% if @categories.any? %>
-      <ul class="list-group list-style-none">
+      <ul>
         <p class="alert-info">Click on category name to see its expenses.</p>
         <% @categories.each do |category| %>
-          <li class="list-group-item ms-0">
+          <li class="d-flex justify-content-between align-items-center">
             <%= render category %>
           </li>
         <% end %>
@@ -17,7 +17,7 @@
     <% end %>
   </div>
 
-  <%= link_to "New Category", new_user_category_path(current_user), class: "link-buttons" %>
+  <%= link_to "New Category", new_user_category_path(current_user), class: "link-buttons mb-2" %>
 <% else %>
   <div>
     <h3 class="alert-msg">You are not signed in</h3>
