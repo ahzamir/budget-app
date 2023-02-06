@@ -6,7 +6,7 @@
   Total: <%= @category.total_expenses(current_user).round(2) %> <span class="text-warning">$</span>
 </h3>
 
-<div class="row">
+<div class="row w-100 p-3 g-3 d-flex justify-content-center">
   <% @expenses.each do |expense| %>
     <%= render expense %>
   <% end %>

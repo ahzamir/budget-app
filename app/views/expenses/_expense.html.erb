@@ -1,5 +1,5 @@
-<div id="<%= dom_id expense %>" class="expense">
-    <div>
+<div id="<%= dom_id expense %>" class="expense p-3 m-3 d-flex justify-content-between align-items-center col-md-4">
+    <div class="d-flex flex-column justify-content-between">
         <h3>
             <%= expense.name %>
         </h3>
@@ -7,7 +7,7 @@
             <%= expense.created_at.strftime("%d/%m/%Y") %>
         </p>
     </div>
-    <p>
-        Amount: <%= expense.amount %>
+    <p class="text-end fw-bold fs-6 m-0">
+        Amount: <%= expense.amount %> <span class="text-warning">$</span>
     </p>
 </div>
