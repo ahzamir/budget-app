@@ -1,15 +1,14 @@
 <div class="page-header">
     <h2>User Profile</h2>
 </div>
-<div class="user-info">
-    <h3>
-        Name: <%= @user.name %>
-    </h3>
-    <p>
-        Email: <%= @user.email %>
-    </p>
-    <p>
-        Created at: <%= @user.created_at %>
-    </p>
-    <%= link_to "| Categories |", user_categories_path(@user) %>
+<div class="d-flex justify-content-center w-100 p-3 p-md-5">
+    <div class="card p-3 user-card">
+        <div class="card-body">
+            <%= image_tag image_path('user.png'), class: 'img-responsive w-25 center-block' %>
+            <h5 class="card-title pt-3">Name: <%= @user.name %></h5>
+            <p class="card-text pt-3">Email: <%= @user.email %></p>
+            <p class="card-text pb-3">Created at: <%= @user.created_at %></p>
+            <%= link_to "Categories", user_categories_path(@user), class: "link-buttons" %>
+        </div>
+    </div>
 </div>

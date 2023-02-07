@@ -1,20 +1,24 @@
 <div class="page-header">
-  <h2>Log in</h2>
+  <h2 class="text-center">Log in</h2>
 </div>
 
+<div class="d-flex justify-content-around w-100 p-3 pb-0">
+  <div class="w-100 d-flex flex-column justify-content-center w-md-50 ps-md-5 pe-md-5">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
+    <%= image_tag image_path('email.png'), class: 'img-responsive center-block icons' %>
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
+    <%= image_tag image_path('password.png'), class: 'img-responsive center-block icons' %>
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="field checkbox">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
@@ -24,5 +28,7 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
-
+</div>
+<%= image_tag image_path('ewallet.png'), class: 'd-none d-md-block img-responsive center-block ps-md-5 pe-md-5' %>
+</div>
 <%= render "devise/shared/links" %>

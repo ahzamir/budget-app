@@ -1,9 +1,9 @@
-<%= form_with(url: user_categories_path(current_user), model: @category, local: true) do |form| %>
+<%= form_with(url: user_categories_path(current_user), model: @category, local: true, class: "w-100 d-flex flex-column align-items-center") do |form| %>
   <% if category.errors.any? %>
-    <div style="color: red">
+    <div id="error_explanation" class="alert alert-danger">
       <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
 
-      <ul>
+      <ul class="list-unstyled">
         <% category.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
@@ -11,17 +11,75 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="w-100">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "w-100" %>
   </div>
 
-  <div>
-    <%= form.label :icon %>
-    <%= form.text_field :icon %>
-  </div>    
-
-  <div>
+  <div class="row border border-dark rounded m-1 p-2 m-md-5 p-md-5">
+    <h2 class="col-12 text-center text-dark">Choose an icon for your category</h2>
+    <div class="col-4 col-md-3 d-flex justify-content-around">
+      <%= image_tag image_path('airplane.png'), class: "icon" %>
+      <%= form.radio_button :icon, "airplane.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('beach.png'), class: "icon" %>
+      <%= form.radio_button :icon, "beach.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('first-aid-kit.png'), class: "icon" %>
+      <%= form.radio_button :icon, "first-aid-kit.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('food.png'), class: "icon" %>
+      <%= form.radio_button :icon, "food.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('gift.png'), class: "icon" %>
+      <%= form.radio_button :icon, "gift.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('home.png'), class: "icon" %>
+      <%= form.radio_button :icon, "home.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('insurance.png'), class: "icon" %>
+      <%= form.radio_button :icon, "insurance.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('newlyweds.png'), class: "icon" %>
+      <%= form.radio_button :icon, "newlyweds.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('parking.png'), class: "icon" %>
+      <%= form.radio_button :icon, "parking.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('workplace.png'), class: "icon" %>
+      <%= form.radio_button :icon, "workplace.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('tic-tac-toe.png'), class: "icon" %>
+      <%= form.radio_button :icon, "tic-tac-toe.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('team-shirt.png'), class: "icon" %>
+      <%= form.radio_button :icon, "team-shirt.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('support.png'), class: "icon" %>
+      <%= form.radio_button :icon, "support.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('saving.png'), class: "icon" %>
+      <%= form.radio_button :icon, "saving.png" %>
+    </div>
+    <div class="col-4 col-md-3 d-flex justify-content-around mb-3">
+      <%= image_tag image_path('profits.png'), class: "icon" %>
+      <%= form.radio_button :icon, "profits.png" %>
+    </div>
+  </div>
+  <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
