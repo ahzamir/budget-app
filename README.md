@@ -7,7 +7,7 @@
 
 ## Live Demo
 - [Video demo](https://www.loom.com/share/30f987d8de024de8b90b6ace0016a6d0)
-- [Budget_app](https://zamir-budget-app.herokuapp.com)
+- [Budget_app](https://budget-app-1.onrender.com/)
 
 ## Schema
 ![](https://github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png)
