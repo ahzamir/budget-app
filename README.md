@@ -2,7 +2,8 @@
 
 ## Budget App
 
-> This is a budget app that allows users to add their expenses categories and expenses. It also allows users to see their total expenses.
+> This is a budget planner app that allows users to add their expenses categories and expenses. It also allows users to see their total expenses.
+![BUDGET APP 3](https://user-images.githubusercontent.com/96838030/217308689-803d9022-f520-470c-aee0-58d885294960.png)
 
 ## Live Demo
 - [Video demo](https://www.loom.com/share/30f987d8de024de8b90b6ace0016a6d0)
