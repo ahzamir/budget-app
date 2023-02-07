@@ -1,0 +1,332 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ */
+@import "bootstrap";
+@import "**/*";
+
+/* stylelint-disable */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url ('proxima-nova-light-webfont.eot');
+  src: url ('proxima-nova-light-webfont.eot?#iefix') format ('embedded-opentype'),
+    url ('proxima-nova-light-webfont.woff2') format ('woff2'),
+    url ('proxima-nova-light-webfont.woff') format ('woff'),
+    url ('proxima-nova-light-webfont.ttf') format ('truetype'),
+    url ('proxima-nova-light-webfont.svg#proxima_nova_light') format ('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* stylelint-enable */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light: #ebf7fa;
+  --main: #3778c2;
+  --text: #434b54;
+  --second: rgba(76, 236, 207);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--light);
+}
+
+header {
+  background: rgb(55, 120, 194);
+  background: linear-gradient(270deg, rgba(55, 120, 194, 1) 28%, rgba(76, 236, 207, 1) 89%);
+  color: var(--light);
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--text);
+}
+
+header h1 {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--light);
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+a {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--second);
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+a:hover {
+  color: var(--main);
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: var(--light);
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: rgb(246, 128, 107);
+}
+
+form input {
+  width: 100%;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--text);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: var(--second) 1px solid;
+  border-radius: 5px;
+}
+
+.checkbox input {
+  width: 1rem;
+}
+
+.actions input {
+  width: fit-content;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--light);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: var(--second) 1px solid;
+  border-radius: 5px;
+  background-color: var(--second);
+}
+
+.actions input:hover {
+  transition: 0.5s;
+  background-color: rgb(65, 208, 182);
+  cursor: pointer;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: var(--light);
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0;
+  transition:
+    transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: var(--light);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 230px;
+  margin: -100px 0 0 -50px;
+  padding: 2rem;
+  padding-top: 125px;
+  background: rgb(55, 120, 194);
+  background: linear-gradient(270deg, rgba(55, 120, 194, 0.6363795518207283) 28%, rgba(76, 236, 207, 1) 89%);
+  border: #60b52368 3px solid;
+  border-radius: 0 0 200px 0;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0%);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 5px;
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  margin-right: 1.2rem;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+h2 {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--light);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+p {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.alert-msg {
+  background-color: tomato;
+  color: var(--light);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.alert-info {
+  color: var(--second);
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+form {
+  padding: 1.5rem;
+  margin: 1rem;
+  border: var(--second) 1px solid;
+  border-radius: 5px;
+}
+
+form label {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.page-header {
+  width: 100%;
+  background: rgb(55, 120, 194);
+  background: linear-gradient(270deg, rgba(55, 120, 194, 1) 28%, rgba(76, 236, 207, 1) 89%);
+}
+
+.icons {
+  width: 40px;
+  height: 40px;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+}
+
+.link-buttons {
+  padding: 1rem;
+  background-color: #3778c2;
+  border-radius: 5px;
+  color: var(--light);
+}
+
+.link-buttons:hover {
+  background-color: var(--light);
+  color: #3778c2;
+  border: #3778c2 1px solid;
+}
+
+.user-card {
+  width: 50%;
+}
+
+.category,
+.expense {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.category-name {
+  font-size: 1.5rem;
+}
+
+.category-icon {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .user-card {
+    width: 100%;
+  }
+
+  .category-name {
+    font-size: 0.7rem;
+  }
+}

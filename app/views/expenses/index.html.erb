@@ -1,17 +1,16 @@
-<p style="color: green"><%= notice %></p>
 <div class="page-header">
   <h2>Expenses</h2>
 </div>
 
-<h3>
-  Total expenses: <%= @category.total_expenses(current_user).round(2) %>
+<h3 class="fw-bold text-uppercase m-3 fs-4">
+  Total: <%= @category.total_expenses(current_user).round(2) %> <span class="text-warning">$</span>
 </h3>
 
-<div id="expenses" class="expenses">
+<div class="row w-100 p-3 g-3 d-flex justify-content-center">
   <% @expenses.each do |expense| %>
     <%= render expense %>
   <% end %>
 </div>
 
-<%= link_to "| New expense |", new_user_category_expense_path(current_user, @category) %>
-<%= link_to "| Back to categories |", user_categories_path(current_user) %>
+<%= link_to "New expense", new_user_category_expense_path(current_user, @category), class: "link-buttons mb-3" %>
+<%= link_to "Back to categories", user_categories_path(current_user), class: "link-buttons mb-3" %>

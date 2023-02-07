@@ -72,6 +72,8 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'devise'
-
+gem 'bootstrap', '~> 5.1.3'
 gem 'cancancan'
+gem 'devise'
+gem 'rails_12factor', group: :production
+gem 'sassc-rails'
