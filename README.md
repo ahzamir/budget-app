@@ -47,6 +47,9 @@ $ rails server
 $ bundle install
 ```
 ```
+$ yarn install
+```
+```
 $ rubocop .
 ```
 
